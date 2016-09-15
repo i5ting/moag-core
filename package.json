@@ -16,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/i5ting/moag-core/issues"
   },
+  "dependencies": {
+    "bluebird": "^2.9.27",
+    "commander": "^2.8.1",
+    "debug": "~2.2.0",
+    "dirw": "^1.0.2",
+    "inflected": "^1.1.6",
+    "mkdirp": "^0.5.1",
+    "moment": "^2.10.3",
+    "shelljs": "^0.5.0",
+    "tpl_apply": "^1.0.5"
+  },
   "homepage": "https://github.com/i5ting/moag-core#readme"
 }
