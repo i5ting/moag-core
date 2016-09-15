@@ -9,7 +9,7 @@ argv.shift();
 var current_path = process.cwd();
 
 var model = {
-  base_path : current_path + '/app',
+  
   entity:'entity',
   attr:{}
 }
@@ -22,7 +22,7 @@ model.entity = argv[1];
 
 // main
 var Generator = require('../index');
-var g = new Generator(model,{});
+var g = new Generator(model,{base_path : current_path + '/app'});
 
 g.destroy();
  

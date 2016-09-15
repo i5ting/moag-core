@@ -1,6 +1,5 @@
 
 var model = {
-  base_path : __dirname,
   entity: 'user',
   attr:{
     username: 'string',
@@ -9,10 +8,10 @@ var model = {
 }
 
 var opts = {
+  base_path : __dirname,
   framework: 'koa2-common',
   tpl_path: __dirname + '/vendor/'
 }
-
 
 // main
 var Generator = require('.');

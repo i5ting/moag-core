@@ -46,7 +46,7 @@ function g (obj, opts) {
   this.model = obj;
   
   this.root_path = __dirname;
-  this.base_path = obj.base_path;
+  this.base_path = opts.base_path;
   this.framework = opts.framework ? opts.framework :'express';
   
   this.option = _default_options(this.base_path);

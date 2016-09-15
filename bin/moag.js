@@ -4,6 +4,9 @@ var debug = require('../lib/debug');
 var child_process = require('child_process');
 var program = require('commander');
 
+// var file_path = __dirname;
+var current_path = process.cwd();
+
 program
   .version('0.0.1')
   .option('-k, --koa', 'generat code with koa')
@@ -14,7 +17,9 @@ program
   .parse(process.argv);
 
 var opts = {
-  framework: 'express'
+  framework: 'koa2-common',
+  base_path : current_path,
+  tpl_path: current_path + '/vendor/'
 }
 
 if (program.koa || program.async || program.common || program.generator) {
@@ -44,11 +49,8 @@ if (program.express) {
 var argv = process.argv;
 argv.shift();
 
-// var file_path = __dirname;
-var current_path = process.cwd();
 
 var model = {
-  base_path : current_path,
   entity: 'entity',
   attr:{}
 }
