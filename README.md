@@ -30,6 +30,16 @@ var g = new Generator(model, opts);
 g.start();
 ```
 
+## 设计
+
+- moag作为入口
+- 依赖
+  - moag-koa2-common
+  - moag-koa2-async
+  - moag-koa2-mongo
+- 根据依赖，生成moag -f koa2-common user name:string
+  - tpl_path读取koa2-common下的
+
 
 ## TODO
 
